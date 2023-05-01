@@ -1,45 +1,29 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>예쁜 계산기</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<div class="calculator">
-		<div class="screen">
-			<div class="history"></div>
-			<div class="output">0</div>
-		</div>
-		<div class="button-row">
-			<button class="button">AC</button>
-			<button class="button">+/-</button>
-			<button class="button">%</button>
-			<button class="button operator">/</button>
-		</div>
-		<div class="button-row">
-			<button class="button">7</button>
-			<button class="button">8</button>
-			<button class="button">9</button>
-			<button class="button operator">x</button>
-		</div>
-		<div class="button-row">
-			<button class="button">4</button>
-			<button class="button">5</button>
-			<button class="button">6</button>
-			<button class="button operator">-</button>
-		</div>
-		<div class="button-row">
-			<button class="button">1</button>
-			<button class="button">2</button>
-			<button class="button">3</button>
-			<button class="button operator">+</button>
-		</div>
-		<div class="button-row">
-			<button class="button zero">0</button>
-			<button class="button">.</button>
-			<button class="button operator">=</button>
-		</div>
-	</div>
-	<script src="script.js"></script>
-</body>
-</html>
+<div class="calculator">
+  <div class="display">
+    <span id="result">0</span>
+  </div>
+  <div class="button-row">
+    <button class="clear" onclick="clearDisplay()">C</button>
+    <button class="operator" onclick="appendChar('/')">÷</button>
+    <button class="operator" onclick="appendChar('*')">x</button>
+    <button class="operator" onclick="appendChar('-')">-</button>
+  </div>
+  <div class="button-row">
+    <button class="number" onclick="appendChar('7')">7</button>
+    <button class="number" onclick="appendChar('8')">8</button>
+    <button class="number" onclick="appendChar('9')">9</button>
+    <button class="operator" onclick="appendChar('+')">+</button>
+  </div>
+  <div class="button-row">
+    <button class="number" onclick="appendChar('4')">4</button>
+    <button class="number" onclick="appendChar('5')">5</button>
+    <button class="number" onclick="appendChar('6')">6</button>
+    <button class="equal" onclick="calculate()">=</button>
+  </div>
+  <div class="button-row">
+    <button class="number" onclick="appendChar('1')">1</button>
+    <button class="number" onclick="appendChar('2')">2</button>
+    <button class="number" onclick="appendChar('3')">3</button>
+    <button class="decimal" onclick="appendChar('.')">.</button>
+  </div>
+</div>
